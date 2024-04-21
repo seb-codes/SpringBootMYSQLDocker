@@ -13,6 +13,11 @@ public class StudentController {
     @Autowired
     private StudentRepo studentRepo;
 
+    @GetMapping( value = "/")
+    public String getPage(){
+        return "Welcome";
+    }
+
     @GetMapping("/findAll")
    public List<Student> getAllStudent(){
         return studentRepo.findAll();
